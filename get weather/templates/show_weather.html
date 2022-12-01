@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {%with messages = get_flashed_messages() %} <!--gets the flash messages-->
+	    {% if messages %}
+		    {% for msg in messages %}
+			    <p style="text-align: center; font-size: 150%;">{{msg}}</p>
+			{% endfor %}
+		{% endif %}
+	{% endwith %}
+
+<pre style="text-align: center; font-size: 150%;">
+    
+{{weather}}
+</pre>
+{%endblock%}

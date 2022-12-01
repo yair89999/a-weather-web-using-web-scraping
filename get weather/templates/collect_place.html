@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {%with messages = get_flashed_messages() %} <!--gets the flash messages-->
+	    {% if messages %}
+		    {% for msg in messages %}
+			    <p style="text-align: center; font-size: 150%;">{{msg}}</p>
+			{% endfor %}
+		{% endif %}
+	{% endwith %}
+<pre>
+
+
+</pre> <!--just to go down in a few lines-->
+<form action="#" method="post">
+    <p  style="text-align:center; font-size: 120%;">city/country: </p> <!--paragraph-->
+	<p  style="text-align:center; font-size: 120%;"><input style="text-align: center;" type="text" name="place" placeholder="city/country"/></p> <!--saves the data that the user filled in the text box in the variable name "nm"(or anything you putted there) -->
+	<p  style="text-align:center;"><input style="font-size:110%; position: absolute;margin-left: auto;margin-right: auto;" type="submit" value="submit"/></p> <!--submit the data-->
+</form>
+{% endblock %}
